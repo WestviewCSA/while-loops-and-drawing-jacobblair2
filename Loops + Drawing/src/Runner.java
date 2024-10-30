@@ -14,26 +14,73 @@ public class Runner extends JPanel{
 	public void paint(Graphics g) {
 		
 		Graphics2D g2 = (Graphics2D) g;
-        g2.setStroke(new BasicStroke(5));
+        g2.setStroke(new BasicStroke(1));
         
 		 
-		//1) draw a concentric rectangle that's 10pixels from all sides of the "gray"
-		//portion of the GUI
-		g2.drawRect(10, 10, 765, 540);
+ //top right
+        
+		int x1 = 800;
+		int y1 = 0;
+		int x2 = 800;
+		int y2 = 600;
+		int counter = 0;
 		
+		for (; counter < 150; counter++)
+		{
+			g2.drawLine(x1, y1, x2, y2 );
+			x1 -= 24;
+			y2 -= 20;
+		}
+	
+		//top left
 		
-		//2) Draw a horizontal line to bisect the Rectangle
-		g2.drawLine(10, 270, 770, 270);
+		int x3 = 0;
+		int y3 = 0;
+		int x4 = 0;
+		int y4 = 600;
+		int counter2 = 0;
 		
+		for (; counter2 < 150; counter2++) {
+			g2.drawLine(x3, y3, x4, y4);
+			x3 += 25;
+			y4 -= 20;
+		}
 		
-		//3) Draw a vertical line to bisect the shape again
-		g2.drawLine(765/2, 10, 765/2,550 );
+		//bottom left
+		int x5 = 0;
+		int y5 = 600;
+		int x6 = 0;
+		int y6 = 0;
+		int counter3 = 0;
 		
+		while (counter3 < 150) {
+		    g2.drawLine(x5, y5, x6, y6);
+		    x5 += 25;
+		    y6 += 20;
+		    counter3++;
+		}
+
 		
-		//4) small rectangles on top-left
-		g2.drawLine(765/4, 10, 765/4, 550/2-10);
+		//bottom right
+		int x7 = 800;
+		int y7 = 600;
+		int x8 = 800;
+		int y8 = 0;
+		int counter4 = 0;
 		
+		while (counter4 < 150) {
+			g2.drawLine(x7, y7, x8, y8);
+			x7 -= 25;
+			y8 += 20;
+			counter4++;
+		}
+  
+	
 		
+	       
+	       
+	    }
+	        
 		/* 
 		 * int var = 0; 						<---- control variable
 		 * while(var < 10){ 					<---- condition to run the loop
@@ -49,7 +96,7 @@ public class Runner extends JPanel{
 
 	
 	
-	}
+	
 	
 	
 	
